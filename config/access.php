@@ -3,6 +3,11 @@
 return array(
 
 	/*
+	 * Users table used to store users
+	 */
+	'users_table' => 'users',
+
+	/*
 	 * Role model used by Access to create correct relations. Update the role if it is in a different namespace.
 	*/
 	'role' => 'App\Models\Access\Role\Role',
@@ -69,6 +74,7 @@ return array(
 		 * The role the user is assigned to when they sign up from the frontend, not namespaced
 		 */
 		'default_role' => 'User',
+		//'default_role' => 2,
 
 		/*
 		 * Whether or not the user has to confirm their email when signing up
@@ -90,4 +96,9 @@ return array(
 		 */
 		'role_must_contain_permission' => true
 	],
+
+	/*
+	 * Socialite session variable name
+	 */
+	'socialite_session_name' => 'socialite_provider',
 );
